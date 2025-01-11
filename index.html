@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-    <link rel="icon" type="image/png" href="logo.jpeg"/>
+    <link rel="icon" type="image/png" href="logo.png"/>
     <title>Maika</title>
 </head>
 <body>
@@ -16,14 +16,14 @@
             <div class="container mx-auto flex items-center justify-between py-4 px-6">
                 <!-- Logo with an image -->
                 <div class="logo">
-                    <img src="logo.jpeg" alt="logo" class="h-20">
+                    <img src="logo.png" alt="logo" class="h-20">
                 </div>
                 <!-- Navigation -->
                 <nav class="hidden md:flex space-x-6">
-                    <a href="" class="font-bold">HOME</a>
-                    <a href="" class="font-bold">ABOUT</a>
-                    <a href="" class="font-bold">SKILLS</a>
-                    <a href="" class="font-bold">PROJECT</a>
+                    <a href="#home" class="font-bold">HOME</a>
+                    <a href="#abouts" class="font-bold">ABOUT</a>
+                    <a href="#technicals" class="font-bold">SKILLS</a>
+                    <a href="#project" class="font-bold">PROJECT</a>
                 </nav>
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
@@ -45,7 +45,7 @@
             </div>
         </div>
         
-        <div class="hero flex items-center justify-center">
+        <div id="home" class="hero flex items-center justify-center">
             <div class="text-center space-y-6 px-4">
                 <!-- Title -->
                 <h1 class="text-4xl md:text-6xl font-extrabold" style="color: #502779;">Backend Developer &amp; Business Analyst</h1>
@@ -84,7 +84,7 @@
             </div>
         </div>
 
-        <div class="about bg-[#502779] text-white py-10 px-4">
+        <div id="abouts" class="about bg-[#502779] text-white py-10 px-4">
             <div class="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
                 <!-- Text Content on the Left -->
                 <div class="text-content md:w-1/2 md:mr-12">
@@ -111,7 +111,7 @@
             </div>
         </div>        
 
-        <div class="technical py-10 bg-gray-100">
+        <div id="technicals" class="technical py-10 bg-gray-100">
             <div class="container mx-auto text-center">
                 <h1 class="text-4xl font-extrabold mb-8 text-[#502779]">TECHNICAL SKILLS</h1>
                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
@@ -203,11 +203,134 @@
                         <img src="technical/vscode.svg" alt="VSCode" class="skill-image">
                         <p class="text-sm md:text-base font-medium mt-2">VSCode</p>
                     </div>
+                    <div class="skill-card">
+                        <img src="technical/android.png" alt="Android Studio" class="skill-image">
+                        <p class="text-sm md:text-base font-medium mt-2">Android Studio</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-
+        <div id="project" class="projects mx-auto p-8 bg-gray-100">
+            <h1 class="text-4xl font-bold text-center mb-12">MY PROJECTS</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- FertiliSense Project -->
+                <div id="proj" class="relative group border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <div class="grid grid-cols-2 gap-2 p-2">
+                        <img src="projects/p1-img1.png" alt="p1-img1" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p1-img2.png" alt="p1-img2" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p1-img3.png" alt="p1-img3" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p1-img4.png" alt="p1-img4" class="object-cover w-full h-[150px] rounded">
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center p-4">
+                        <h2 class="text-2xl font-bold">FertiliSense</h2>
+                        <p class="text-sm mt-2"> An Artificial Intelligent Fertility Mobile Application using Predictive Analytics in the Reproductive System empowers users to forecast fertility windows with enhanced accuracy. It provides valuable insights into reproductive health by leveraging data analytics and personalized predictions. Users can log symptoms such as cramps, mood changes, and other physical conditions, allowing the app to track health patterns over time. The system evaluates logged symptoms and offers tailored advice for managing reproductive health effectively.</p>
+                        <button 
+                            class="mt-4 px-4 py-2 rounded text-white font-medium"
+                            onclick="window.open('https://github.com/mikeyswifedjk/FertiliSense', '_blank')">
+                            View on GitHub
+                        </button>
+                    </div>
+                </div>
+        
+                <!-- ShopBee Project -->
+                <div id="proj" class="relative group border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <div class="grid grid-cols-2 gap-2 p-2">
+                        <img src="projects/p2-img1.png" alt="p2-img1" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p2-img2.png" alt="p2-img2" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p2-img3.png" alt="p2-img3" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p2-img4.png" alt="p2-img4" class="object-cover w-full h-[150px] rounded">
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center p-4">
+                        <h2 class="text-2xl font-bold">ShopBee</h2>
+                        <p class="text-sm mt-2"> I developed a full-featured e-commerce website inspired by Shopee, Amazon, and Lazada. The platform includes user-friendly product listings, a secure checkout process, real-time order tracking, and customer review management. An admin panel allows control over product management, user accounts, sales reports, and promotional offers. Security measures include encrypted payments and role-based access control. The site is fully responsive, scalable, and optimized for performance, supporting seamless user experiences across all devices.</p>
+                        <button 
+                            class="mt-4 px-4 py-2 rounded text-white font-medium"
+                            onclick="window.open('https://github.com/mikeyswifedjk/ShopBee', '_blank')">
+                            View on GitHub
+                        </button>
+                    </div>
+                </div>
+        
+                <!-- ShopSavvy Project -->
+                <div id="proj" class="relative group border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <div class="grid grid-cols-2 gap-2 p-2">
+                        <img src="projects/p3-img1.png" alt="p3-img1" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p3-img2.png" alt="p3-img2" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p3-img3.png" alt="p3-img3" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p3-img4.png" alt="p3-img4" class="object-cover w-full h-[150px] rounded">
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center p-4">
+                        <h2 class="text-2xl font-bold">ShopSavvy</h2>
+                        <p class="text-sm mt-2"> ShopSavvy is like Shopee, but I used a different approach in its development. Instead of traditional methods, I integrated AJAX for real-time updates, JSON for data handling, and jQuery for dynamic user interactions, with XML used for data storage and management. The platform features product listings, secure checkout, order tracking, and supports both an admin panel and a dedicated seller side for managing inventory, product uploads, and sales performance. Sellers can monitor orders, update stock, and communicate with customers directly through the platform. This approach ensures a smooth, scalable, and responsive experience for buyers, sellers, and administrators alike.</p>
+                        <button 
+                            class="mt-4 px-4 py-2  rounded text-white font-medium"
+                            onclick="window.open('https://github.com/mikeyswifedjk/ShopSavvy', '_blank')">
+                            View on GitHub
+                        </button>
+                    </div>
+                </div>
+        
+                <!-- Solaire Hotel Project -->
+                <div id="proj" class="relative group border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <div class="grid grid-cols-2 gap-2 p-2">
+                        <img src="projects/p4-img1.png" alt="p4-img1" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p4-img2.png" alt="p4-img2" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p4-img3.png" alt="p4-img3" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p4-img4.png" alt="p4-img4" class="object-cover w-full h-[150px] rounded">
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center p-4">
+                        <h2 class="text-2xl font-bold">Solaire Hotel</h2>
+                        <p class="text-sm mt-2"> I developed a full-featured hotel e-commerce platform inspired by popular booking sites like Agoda and Booking.com. The platform includes user-friendly hotel listings, secure booking options, real-time availability updates, and customer review management. An admin panel allows control over room inventory, booking management, user accounts, and promotional offers. Hotel partners can manage room details, prices, and monitor reservations through a dedicated portal.</p>
+                        <button 
+                            class="mt-4 px-4 py-2 rounded text-white font-medium"
+                            onclick="window.open('https://github.com/mikeyswifedjk/iPump', '_blank')">
+                            View on GitHub
+                        </button>
+                    </div>
+                </div>
+        
+                <!-- JJTM Machine Project -->
+                <div id="proj" class="relative group border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <div class="grid grid-cols-2 gap-2 p-2">
+                        <img src="projects/p5-img1.png" alt="p5-img1" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p5-img2.png" alt="p5-img2" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p5-img3.png" alt="p5-img3" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p5-img4.png" alt="p5-img4" class="object-cover w-full h-[150px] rounded">
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center p-4">
+                        <h2 class="text-2xl font-bold">JJTM Machine</h2>
+                        <p class="text-sm mt-2"> I developed a fully functional ATM machine system with an integrated admin panel for managing transactions and user accounts. The system allows users to securely withdraw, deposit, and check balances using a simple, intuitive interface. Real-time transaction updates are provided, ensuring users can track their activity efficiently. The admin panel offers detailed oversight, enabling the management of user accounts, transaction logs, and ATM maintenance schedules. Security measures, such as encryption and two-factor authentication, are implemented to ensure the safety of user data and financial transactions.</p>
+                        <button 
+                            class="mt-4 px-4 py-2 rounded text-white font-medium"
+                            onclick="window.open('https://github.com/mikeyswifedjk/ATM-Machine', '_blank')">
+                            View on GitHub
+                        </button>
+                    </div>
+                </div>
+        
+                <!-- Journal Archive Project -->
+                <div id="proj" class="relative group border rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <div class="grid grid-cols-2 gap-2 p-2">
+                        <img src="projects/p6-img1.png" alt="p6-img1" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p6-img2.png" alt="p6-img2" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p6-img3.png" alt="p6-img3" class="object-cover w-full h-[150px] rounded">
+                        <img src="projects/p6-img4.png" alt="p6-img4" class="object-cover w-full h-[150px] rounded">
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center p-4">
+                        <h2 class="text-2xl font-bold">Journal Archive</h2>
+                        <p class="text-sm mt-2"> I developed a comprehensive journal archive system with five distinct user roles: Admin, Author, Reader, Reviewer, and Editor. The <b>Admin</b> role has full control over the platform, managing user accounts, content approval, and system settings. <b>Authors</b> can submit articles, manage their submissions, and track the status of their work. <b>Reviewers</b> can evaluate and provide feedback on submitted articles, helping maintain the quality of the content. <b> Editors</b> are responsible for reviewing and editing articles before they are published, ensuring content accuracy and consistency. <b>Readers</b> have access to published articles, can download or view them, and may engage with content through comments or ratings.</p>
+                        <button 
+                            class="mt-4 px-4 py-2 rounded text-white font-medium"
+                            onclick="window.open('https://github.com/mikeyswifedjk/AndromedaArchive', '_blank')">
+                            View on GitHub
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer"></div>
         
     </div>
 
