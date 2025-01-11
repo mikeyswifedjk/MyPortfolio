@@ -26,7 +26,7 @@
 }
 
 .hero {
-    min-height: calc(82vh);
+    min-height: calc(85vh);
 }
 
 .social-icon {
@@ -61,4 +61,45 @@
 
 .resume-link:hover {
     transform: scale(1.1); 
+}
+
+.about {
+    background-color: #502779; /* Purple background */
+    color: white; /* White text */
+    padding: 4rem 1rem; /* Vertical padding */
+}
+
+.text-content {
+    max-width: 100%;
+}
+
+.image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    object-fit: cover;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.3s ease;
+}
+
+.image-section img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 2rem 1rem; /* Adjust padding for smaller screens */
+    }
 }
