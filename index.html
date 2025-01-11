@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <title>Maika</title>
+</head>
+<body>
+    <div class="content">
+
+        <div class="header">
+            <div class="container mx-auto flex items-center justify-between py-4 px-6">
+                <!-- Logo with an image -->
+                <div class="logo">
+                    <img src="logo.jpeg" alt="logo" class="h-20">
+                </div>
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-6">
+                    <a href="" class="font-bold">HOME</a>
+                    <a href="" class="font-bold">ABOUT</a>
+                    <a href="" class="font-bold">SKILLS</a>
+                    <a href="" class="font-bold">PROJECT</a>
+                </nav>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" aria-label="Toggle navigation menu" class="focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>                    
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-gray-100">
+                <nav class="flex flex-col space-y-4 py-4 px-6">
+                    <a href="" class="font-bold">HOME</a>
+                    <a href="" class="font-bold">ABOUT</a>
+                    <a href="" class="font-bold">SKILLS</a>
+                    <a href="" class="font-bold">PROJECT</a>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="hero flex items-center justify-center">
+            <div class="text-center space-y-6 px-4">
+                <!-- Title -->
+                <h1 class="text-4xl md:text-6xl font-extrabold" style="color: #502779;">Backend Developer &amp; Business Analyst</h1>
+                
+                <!-- Subtitle -->
+                <p class="text-lg md:text-3xl text-gray-600">Turning data into decisions and code into solutions</p>
+                
+                <!-- Profile Image -->
+                <div class="flex justify-center">
+                    <img src="maika.jpeg" alt="Maika" class="w-80 h-80 md:w-96 md:h-96 lg:w-120 lg:h-120 rounded-full shadow-lg object-cover">
+                </div>
+                
+                <!-- Introduction with typing animation -->
+                <h2 class="text-3xl md:text-3xl font-semibold">
+                    <span class="typing-animation" id="typing-text">Hi, I'm Maika. Nice meeting you.</span>
+                </h2>
+                
+                <!-- Social Links -->
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.linkedin.com/in/maika-ybiza-simbulan-1a6729327/" class="social-icon hover:opacity-80" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/mikeyswifedjk" class="social-icon hover:opacity-80" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="cv_simbulan.pdf" class="resume-link hover:opacity-80" target="_blank">
+                        MY RESUME
+                    </a>
+                    <a href="https://www.facebook.com/maika.ordonez.3/" class="social-icon hover:opacity-80" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mikeyswifedjk/" class="social-icon hover:opacity-80" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Array of greetings
+        const greetings = ['Hi, I\'m Maika. Nice meeting you.', 'Ciao, I\'m Maika. Nice meeting you.', 'Hey, I\'m Maika. Nice to meet you!', 'Hello, I\'m Maika. It\'s a pleasure to meet you!'];
+        let index = 0;
+        let typingElement = document.getElementById('typing-text');
+
+        function typeText() {
+            let currentGreeting = greetings[index];
+            typingElement.textContent = '';
+            let i = 0;
+
+            // Simulate typing effect
+            let typingInterval = setInterval(() => {
+                typingElement.textContent += currentGreeting[i];
+                i++;
+                if (i >= currentGreeting.length) {
+                    clearInterval(typingInterval);
+                    setTimeout(() => {
+                        index = (index + 1) % greetings.length;
+                        typeText(); // Type the next greeting
+                    }, 1000); // Wait before changing to the next greeting
+                }
+            }, 100); // Speed of typing
+        }
+
+        typeText(); // Start typing the first greeting
+    </script>
+</body>
+</html>

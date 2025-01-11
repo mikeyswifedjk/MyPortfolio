@@ -1,0 +1,64 @@
+.header nav :hover{
+    color: #ad53a6;
+}
+
+.typing-animation {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ad53a6;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 6s steps(40) 1s forwards, blink .75s step-end infinite;
+}
+
+@keyframes typing {
+    100% {
+        width: 30ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.hero {
+    min-height: calc(82vh);
+}
+
+.social-icon {
+    background-color: #502779; 
+    color: white; 
+    height: 50px;
+    width: 50px;
+    padding: 12px; 
+    border-radius: 50%; 
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); 
+}
+
+.social-icon i {
+    font-size: 24px;
+}
+
+.resume-link {
+    background-color: #502779; 
+    color: white; 
+    padding: 16px 16px; 
+    border-radius: 30px; 
+    display: inline-block;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resume-link:hover {
+    transform: scale(1.1); 
+}
