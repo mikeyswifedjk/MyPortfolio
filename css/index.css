@@ -186,3 +186,69 @@ footer {
 .copyright{
     background-color: #48236C;
 }
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #502779;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.scroll-to-top:hover {
+    background-color: #6b3f94;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the text content */
+.text-content {
+    opacity: 0;
+    animation: zoomIn 0.8s forwards ease-out;
+}
+
+/* Apply the animation to the image */
+.image-section img {
+    opacity: 0;
+    animation: zoomIn 1s forwards ease-out;
+}
+
+/* Staggered delay for different elements */
+.text-content {
+    animation-delay: 0.2s;
+}
+
+.image-section img {
+    animation-delay: 0.5s;
+}
