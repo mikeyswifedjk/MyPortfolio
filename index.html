@@ -12,7 +12,7 @@
 <body>
     <div class="content">
 
-        <div id="header" class="header fixed top-0 left-0 right-0 z-50 transition-transform transform">
+        <div class="header">
             <div class="container mx-auto flex items-center justify-between py-4 px-6">
                 <!-- Logo with an image -->
                 <div class="logo">
@@ -35,7 +35,7 @@
                 </div>
             </div>
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden">
+            <div id="mobile-menu" class="hidden md:hidden bg-gray-100">
                 <nav class="flex flex-col space-y-4 py-4 px-6">
                     <a href="" class="font-bold">HOME</a>
                     <a href="" class="font-bold">ABOUT</a>
@@ -45,7 +45,7 @@
             </div>
         </div>
         
-        <div id="home" class="hero flex items-center justify-center mt-20">
+        <div id="home" class="hero flex items-center justify-center">
             <div class="text-center space-y-6 px-4 hero-content">
                 <!-- Title -->
                 <h1 class="text-4xl md:text-6xl font-extrabold" style="color: #502779;">Backend Developer &amp; Business Analyst</h1>
@@ -361,6 +361,54 @@
         
     </div>
 
-    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Array of greetings
+        const greetings = ['Hi, I\'m Maika. Nice meeting you!', 'Ciao, sono Maika. Piacere di conoscerti!', 'Hey, I\'m Maika. Nice to meet you!', 'Hello, I\'m Maika. It\'s a pleasure to meet you!'];
+        let index = 0;
+        let typingElement = document.getElementById('typing-text');
+
+        function typeText() {
+            let currentGreeting = greetings[index];
+            typingElement.textContent = '';
+            let i = 0;
+
+            // Simulate typing effect
+            let typingInterval = setInterval(() => {
+                typingElement.textContent += currentGreeting[i];
+                i++;
+                if (i >= currentGreeting.length) {
+                    clearInterval(typingInterval);
+                    setTimeout(() => {
+                        index = (index + 1) % greetings.length;
+                        typeText(); // Type the next greeting
+                    }, 1000); // Wait before changing to the next greeting
+                }
+            }, 100); // Speed of typing
+        }
+
+        typeText(); // Start typing the first greeting
+
+        let lastScrollTop = 0; // Track the last scroll position
+        const header = document.getElementById("header");
+
+        window.addEventListener("scroll", function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+                // Scrolling down, hide header
+                header.classList.add("transform", "-translate-y-full");
+            } else {
+                // Scrolling up, show header
+                header.classList.remove("transform", "-translate-y-full");
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
 </body>
 </html>
