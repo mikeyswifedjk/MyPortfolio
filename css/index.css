@@ -68,6 +68,7 @@ body{
 }
 
 .about {
+    margin-top: 10px;
     background-color: #502779; /* Purple background */
     color: white; /* White text */
     padding: 4rem 1rem; /* Vertical padding */
